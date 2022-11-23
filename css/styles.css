@@ -1,31 +1,22 @@
-* {
-    box-sizing: border-box;
-}
-
-body{
-display: flex;
-flex-direction: column;
-align-items: center;
-min-height: 100vh;
-text-align: center;
-}
-
 .gallery {
     width: 100%;
     max-width: 900px;
+    margin-left: 4em;
     display: grid;
     grid-gap: 20px 15px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
 }
 .gallery a:hover {
     transform: scale(1.05);
-    box-shadow: -2px 3px 10px darkgray;
+    box-shadow: -10px 5px 5px darkgrey;
 }
 
+
 #search {
-    width: 500px;
-    padding: 3%;
-    border-radius: 5px;
+    width: 40rem;
+    padding: 10px;
+    border-radius: 3px;
     border: ridge gray;
     box-shadow: 2px 2px 2px grey;
     border-width: thin;
@@ -33,7 +24,7 @@ text-align: center;
 .search {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 25px 0 25px 1rem;
 }
 ::placeholder {
     color: darkgreen;
