@@ -1,16 +1,17 @@
-
 baguetteBox.run('.gallery');
 
-
-  const search = document.getElementById('search');
-  search.addEventListener('keyup', e =>{
-    let currentValue = e.target.value.toLowerCase();
-    let imagename = document.querySelectorAll('img.alt');
-    imagename.forEach(imagename =>{
-        if(imagename.textContent.toLowerCase().includes(currentValue)){
-            imagename.style.display = '';
+    const search = document.getElementById('search');
+    
+    search.addEventListener('keyup', e =>{
+        let currentValue = e.target.value.toLowerCase();
+        let imageName = document.querySelectorAll('[data-caption]');
+    
+    imageName.forEach(image => {
+        const caption = image.getAttribute('data-caption').toLowerCase();
+        if(caption.includes(currentValue)){
+            image.style.display = 'block';
         }else {
-            imagename.style.display = 'none';
+            image.style.display = 'none';
         }
     })
   })
